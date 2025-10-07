@@ -1,10 +1,11 @@
 /* Header Banner */
 header {
   background-color: #24292f; /* fondo oscuro */
-  color: white;              /* texto blanco */
+  color: #ffffff;            /* texto blanco */
   padding: 1rem 2rem;        /* espacio dentro del header */
 }
 
+/* Navegación */
 header nav ul {
   list-style: none;           /* quita los puntos de la lista */
   display: flex;              /* los elementos en línea */
@@ -14,11 +15,45 @@ header nav ul {
 }
 
 header nav a {
-  color: white;               /* links en blanco */
+  color: #f0f6fc;             /* color más claro para mejor contraste */
   text-decoration: none;      /* quita el subrayado */
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 header nav a:hover {
+  color: #58a6ff;             /* azul accesible con buen contraste */
   text-decoration: underline; /* efecto al pasar el ratón */
+}
+
+/* Tema oscuro */
+body[data-theme="dark"] {
+  background-color: #0d1117;  /* fondo oscuro */
+  color: #c9d1d9;             /* texto gris claro */
+}
+
+body[data-theme="dark"] header {
+  background-color: #161b22;  /* ligeramente más claro que el fondo general */
+}
+
+body[data-theme="dark"] nav a {
+  color: #c9d1d9;             /* enlaces legibles en fondo oscuro */
+}
+
+body[data-theme="dark"] nav a:hover {
+  color: #58a6ff;             /* azul con alto contraste */
+}
+
+body[data-theme="dark"] #theme-toggle {
+  background-color: #f0f6fc;  /* fondo claro para el botón */
+  color: #0d1117;             /* texto oscuro */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+body[data-theme="dark"] #theme-toggle:hover {
+  background-color: #58a6ff;
+  color: white;
 }
