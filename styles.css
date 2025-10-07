@@ -1,0 +1,24 @@
+/* Header Banner */
+header {
+  background-color: #24292f; /* fondo oscuro */
+  color: white;              /* texto blanco */
+  padding: 1rem 2rem;        /* espacio dentro del header */
+}
+
+header nav ul {
+  list-style: none;           /* quita los puntos de la lista */
+  display: flex;              /* los elementos en línea */
+  gap: 1.5rem;                /* espacio entre los links */
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  color: white;               /* links en blanco */
+  text-decoration: none;      /* quita el subrayado */
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline; /* efecto al pasar el ratón */
+}
